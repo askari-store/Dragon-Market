@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b13" />
+  <meta name="description" content="Dragon Market — digital subscriptions, gaming perks, and instant digital products." />
+  <title>Dragon Market — Digital Store</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+    :root{--bg:#080b13;--panel:#101624;--panel2:#141d2d;--line:rgba(255,255,255,.09);--text:#f4f7ff;--muted:#9aa7bd;--cyan:#39e3e7;--blue:#4f7cff;--purple:#9d65ff;--radius:22px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% 0%,rgba(37,201,213,.12),transparent 35%),radial-gradient(ellipse at 90% 20%,rgba(95,85,255,.13),transparent 32%),var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(8,11,19,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font:700 22px 'Space Grotesk',sans-serif;letter-spacing:-.7px}.dragon-mark{width:42px;height:42px;flex:0 0 42px;overflow:hidden;border-radius:14px;display:grid;place-items:center;background:#111725;border:1px solid #ffffff22;box-shadow:0 0 30px #36dfe522}.dragon-mark img{width:100%;height:100%;object-fit:contain;object-position:center;display:block}.dragon-art{width:100%;max-width:250px;max-height:260px;object-fit:contain;display:block;margin:-5px auto 14px;filter:drop-shadow(0 10px 24px #0008)}
+    .brand span{background:linear-gradient(90deg,#55f0e8,#6c91ff);-webkit-background-clip:text;background-clip:text;color:transparent}.navlinks{display:flex;gap:28px;color:#bac5d8;font-size:14px}.navlinks a:hover{color:white}.nav-actions{display:flex;align-items:center;gap:10px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);border-radius:13px;padding:12px 17px;font-weight:700;cursor:pointer;transition:.2s;white-space:nowrap}.btn:hover{transform:translateY(-2px)}.btn-primary{color:#061018;background:linear-gradient(100deg,var(--cyan),#6e8dff);border:0;box-shadow:0 10px 35px #39e3e71b}.btn-ghost{background:#ffffff06;color:var(--text)}.mobile-menu{display:none}
+    .hero{padding:86px 0 64px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:54px;min-height:520px}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #42e4e533;background:#37dfe70d;border-radius:999px;padding:8px 13px;color:#a9f7f3;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}h1,h2,h3,p{margin-top:0}h1{font:700 clamp(42px,6vw,70px)/1.02 'Space Grotesk',sans-serif;letter-spacing:-3px;margin:23px 0}.gradient-text{background:linear-gradient(100deg,#f8fbff 8%,#55eee8 50%,#8295ff 92%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:560px;color:var(--muted);font-size:17px;line-height:1.8}.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.hero-notes{display:flex;gap:20px;flex-wrap:wrap;color:#aab7cb;font-size:12px;margin-top:26px}.hero-notes span{display:flex;align-items:center;gap:7px}.check{color:var(--cyan);font-weight:900}
+    .hero-art{position:relative;min-height:360px;display:grid;place-items:center}.orbit{position:absolute;width:310px;height:310px;border:1px solid #56e7e526;border-radius:50%;box-shadow:0 0 100px #4388ff12,inset 0 0 60px #42e4e70a}.orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed #6685ff45;border-radius:50%;inset:24px}.orbit:after{inset:52px}.dragon-card{position:relative;width:min(360px,100%);padding:27px;border:1px solid #6be9ed32;border-radius:27px;background:linear-gradient(145deg,#17283aee,#0d1422f2);box-shadow:0 25px 90px #0008;transform:rotate(-3deg)}.dragon-symbol{font-size:66px;line-height:1;filter:drop-shadow(0 0 20px #42e4e755)}.dragon-card h3{font:700 25px 'Space Grotesk',sans-serif;margin:17px 0 5px}.dragon-card p{font-size:13px;margin:0;color:#a8b7ca}.mini-products{display:flex;gap:8px;margin-top:22px}.mini-products span{flex:1;text-align:center;padding:10px 4px;border:1px solid var(--line);background:#ffffff05;border-radius:12px;font-size:11px;color:#d6deed}
+    .trust-strip{border-block:1px solid var(--line);background:#ffffff03}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:22px 0}.trust-item{display:flex;align-items:center;gap:12px;color:#c8d2e3;font-size:13px}.trust-icon{width:38px;height:38px;display:grid;place-items:center;background:#ffffff07;border:1px solid var(--line);border-radius:12px;color:var(--cyan);font-size:18px}
+    section{padding:78px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}.kicker{font-size:12px;color:var(--cyan);font-weight:700;text-transform:uppercase;letter-spacing:1.5px}.section-head h2{font:700 clamp(28px,4vw,42px)/1.1 'Space Grotesk',sans-serif;letter-spacing:-1.5px;margin:9px 0}.section-head p{color:var(--muted);margin:0;max-width:500px}.catalog-tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}.search{flex:1;min-width:210px;background:#ffffff07;border:1px solid var(--line);color:var(--text);border-radius:13px;padding:13px 15px;outline:none}.search:focus{border-color:#49dfe7a0}.filter{background:#ffffff07;color:#aab7cb;border:1px solid var(--line);border-radius:12px;padding:11px 14px;cursor:pointer}.filter.active,.filter:hover{background:#39e3e718;border-color:#39e3e766;color:#dfffff}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.product{position:relative;overflow:hidden;background:linear-gradient(155deg,#141d2b,#0e1420);border:1px solid var(--line);border-radius:20px;padding:20px;transition:.22s}.product:hover{transform:translateY(-5px);border-color:#50dfe74d;box-shadow:0 18px 45px #0003}.product-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.product-icon{width:53px;height:53px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,#273a52,#172237);font-size:26px;border:1px solid #ffffff10}.tag{font-size:10px;text-transform:uppercase;letter-spacing:.8px;font-weight:700;color:#a5f6f1;background:#38e0df12;border:1px solid #38e0df2e;border-radius:999px;padding:6px 9px}.product h3{font:700 19px 'Space Grotesk',sans-serif;margin:18px 0 5px}.product .desc{color:var(--muted);font-size:13px;min-height:42px;margin-bottom:18px}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:15px;border-top:1px solid var(--line)}.price{font:700 20px 'Space Grotesk',sans-serif}.price small{display:block;font:400 10px 'DM Sans',sans-serif;color:#7f8ca3;margin-top:1px}.buy{padding:10px 12px;font-size:12px}.empty{display:none;color:var(--muted);padding:25px;text-align:center;border:1px dashed var(--line);border-radius:16px}
+    .banner{padding:0 0 75px}.banner-inner{position:relative;overflow:hidden;padding:38px 40px;border:1px solid #55e8e72b;border-radius:25px;background:linear-gradient(105deg,#142a38,#151d37 65%,#211a3b);display:flex;align-items:center;justify-content:space-between;gap:25px}.banner-inner:after{content:"";position:absolute;right:-50px;top:-150px;width:340px;height:340px;border-radius:50%;border:1px solid #7b8aff2d;box-shadow:0 0 0 35px #7b8aff08,0 0 0 70px #7b8aff05}.banner h2{font:700 30px 'Space Grotesk',sans-serif;margin:0 0 8px;position:relative;z-index:1}.banner p{color:#a9b7ca;margin:0;position:relative;z-index:1}.banner .btn{position:relative;z-index:2}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:23px;border-radius:18px;border:1px solid var(--line);background:#ffffff04}.step-num{width:35px;height:35px;border-radius:11px;display:grid;place-items:center;background:#3ce0e718;color:var(--cyan);font-weight:700;margin-bottom:18px}.step h3{font:600 17px 'Space Grotesk',sans-serif;margin-bottom:7px}.step p{color:var(--muted);font-size:13px;margin:0}
+    .faq{max-width:800px;margin:auto}.faq details{border-bottom:1px solid var(--line);padding:18px 0}.faq summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:15px}.faq summary:after{content:"+";color:var(--cyan);font-size:20px}.faq details[open] summary:after{content:"−"}.faq details p{color:var(--muted);font-size:14px;margin:13px 0 0}
+    footer{border-top:1px solid var(--line);padding:32px 0 25px;background:#060910}.footer-top{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-copy{color:#77849a;font-size:12px;margin-top:22px}.footer-links{display:flex;gap:18px;color:#9ba8bc;font-size:13px}.notice{color:#718096;font-size:11px;margin-top:12px;max-width:850px}
+    .toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#182436;border:1px solid #50dfe766;padding:12px 17px;border-radius:12px;z-index:50;transition:.25s;font-size:13px;box-shadow:0 10px 40px #0007}.toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:850px){.navlinks{display:none}.mobile-menu{display:inline-flex}.hero{grid-template-columns:1fr;gap:20px;padding-top:58px}.hero-art{min-height:300px}.orbit{width:270px;height:270px}.dragon-card{max-width:340px}.products{grid-template-columns:repeat(2,1fr)}.trust-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.nav{height:68px}.brand{font-size:19px}.nav-actions .btn-ghost{display:none}.hero{padding:46px 0 42px}h1{letter-spacing:-2px}.hero p{font-size:15px}.hero-art{min-height:285px}.dragon-card{padding:22px}.dragon-symbol{font-size:54px}.trust-grid{gap:13px}.trust-item{font-size:11px}.trust-icon{width:32px;height:32px}.section-head{align-items:start;flex-direction:column}.products{grid-template-columns:1fr}.product .desc{min-height:0}.banner-inner{padding:27px;align-items:flex-start;flex-direction:column}.banner h2{font-size:25px}.steps{grid-template-columns:1fr}.footer-top{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Dragon Market home"><span class="dragon-mark"><img src="./DragonMarket-Logo.png" alt="Dragon Market dragon logo"></span><span>DRAGON MARKET</span></a>
+      <nav class="navlinks" aria-label="Main navigation"><a href="#shop">Shop</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="#contact">Support</a></nav>
+      <div class="nav-actions"><a class="btn btn-ghost" href="#shop">Browse products</a><a class="btn btn-primary" href="#contact">Get support ↗</a><button class="btn btn-ghost mobile-menu" id="menuBtn" aria-label="Open navigation">☰</button></div>
+    </div>
+  </header>
+
+  <main id="home">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Your digital goods hub</div>
+        <h1>Level up your<br><span class="gradient-text">digital life.</span></h1>
+        <p>Explore Dragon Market’s Discord marketplace for gaming products, Nitro-related listings, subscriptions, redeem codes, and in-game currency. Browse a category, then join our Discord to ask about availability and order details.</p>
+        <div class="hero-buttons"><a class="btn btn-primary" href="#shop">Explore the store <span>↘</span></a><a class="btn btn-ghost" href="#how">How it works</a></div>
+        <div class="hero-notes"><span><b class="check">✓</b> Clear product details</span><span><b class="check">✓</b> Support available</span><span><b class="check">✓</b> Mobile friendly</span></div>
+      </div>
+      <div class="hero-art" aria-label="Dragon Market brand artwork">
+        <div class="orbit"></div>
+        <div class="dragon-card"><img class="dragon-art" src="./DragonMarket-Logo.png" alt="Dragon Market dragon emblem"><h3>DRAGON MARKET</h3><p>Digital products. Simple experience.</p><div class="mini-products"><span>🎮 Gaming</span><span>♫ Music</span><span>▶ Streaming</span></div></div>
+      </div>
+    </div>
+
+    <div class="trust-strip"><div class="wrap trust-grid">
+      <div class="trust-item"><span class="trust-icon">⚡</span><span><b>Quick response</b><br>Order assistance</span></div>
+      <div class="trust-item"><span class="trust-icon">◇</span><span><b>Product details</b><br>Before you order</span></div>
+      <div class="trust-item"><span class="trust-icon">⌂</span><span><b>Human support</b><br>Help when needed</span></div>
+      <div class="trust-item"><span class="trust-icon">▣</span><span><b>Simple process</b><br>From inquiry to order</span></div>
+    </div></div>
+
+    <section id="shop"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">The catalogue</div><h2>Find your next favourite.</h2><p>Browse our marketplace categories. For current prices, stock, and order details, contact us through Discord.</p></div></div>
+      <div class="catalog-tools"><input class="search" id="searchInput" type="search" placeholder="Search products..." aria-label="Search products"><button class="filter active" data-filter="all">All products</button><button class="filter" data-filter="accounts">Accounts</button><button class="filter" data-filter="codes">Codes</button><button class="filter" data-filter="subscriptions">Subscriptions</button><button class="filter" data-filter="currency">Game Currency</button><button class="filter" data-filter="community">Memberships</button></div>
+      <div class="products" id="productGrid">
+        <article class="product" data-category="accounts" data-name="MCFA Store Minecraft accounts"><div class="product-top"><div class="product-icon">⛏️</div><span class="tag">Minecraft</span></div><h3>MCFA-STORE</h3><p class="desc">Minecraft-related account listings. Ask support to confirm the exact product, access details, and terms.</p><div class="product-bottom"><div class="price">Ask on Discord<small>Price and stock may vary</small></div><a class="btn btn-primary buy" href="https://discord.gg/sBGPpRnV3" target="_blank" rel="noopener" data-product="MCFA-STORE">Enquire ↗</a></div></article>
+        <article class="product" data-category="codes" data-name="MC Redeemcode Minecraft redeem code"><div class="product-top"><div class="product-icon">🪽</div><span class="tag">Redeem codes</span></div><h3>MC-REDEEMCODE</h3><p class="desc">Minecraft redeem-code listings. Confirm platform compatibility and redemption terms before ordering.</p><div class="product-bottom"><div class="price">Ask on Discord<small>Price and stock may vary</small></div><a class="btn btn-primary buy" href="https://discord.gg/sBGPpRnV3" target="_blank" rel="noopener" data-product="MC-REDEEMCODE">Enquire ↗</a></div></article>
+        <article class="product" data-category="subscriptions" data-name="Discord Nitro Store Nitro subscriptions"><div class="product-top"><div class="product-icon">🧩</div><span class="tag">Discord</span></div><h3>NITRO-STORE</h3><p class="desc">Discord Nitro-related listings. Confirm duration, eligibility, delivery, and applicable platform terms.</p><div class="product-bottom"><div class="price">Ask on Discord<small>Price and stock may vary</small></div><a class="btn btn-primary buy" href="https://discord.gg/sBGPpRnV3" target="_blank" rel="noopener" data-product="NITRO-STORE">Enquire ↗</a></div></article>
+        <article class="product" data-category="subscriptions" data-name="Spotify Premium subscription"><div class="product-top"><div class="product-icon">🎶</div><span class="tag">Music</span></div><h3>SPOTIFY-PREMIUM</h3><p class="desc">Spotify-related subscription listings. Ask for plan, region, duration, and renewal details.</p><div class="product-bottom"><div class="price">Ask on Discord<small>Price and stock may vary</small></div><a class="btn btn-primary buy" href="https://discord.gg/sBGPpRnV3" target="_blank" rel="noopener" data-product="SPOTIFY-PREMIUM">Enquire ↗</a></div></article>
+        <article class="product" data-category="subscriptions" data-name="Netflix Store streaming subscription"><div class="product-top"><div class="product-icon">📺</div><span class="tag">Streaming</span></div><h3>NETFLIX-STORE</h3><p class="desc">Netflix-related listings. Confirm plan, duration, regional availability, and terms before ordering.</p><div class="product-bottom"><div class="price">Ask on Discord<small>Price and stock may vary</small></div><a class="btn btn-primary buy" href="https://discord.gg/sBGPpRnV3" target="_blank" rel="noopener" data-product="NETFLIX-STORE">Enquire ↗</a></div></article>
+        <article class="product" data-category="subscriptions" data-name="Crunchyroll anime subscription"><div class="product-top"><div class="product-icon">🍥</div><span class="tag">Anime</span></div><h3>CRUNCHYROLL</h3><p class="desc">Crunchyroll-related listings. Ask support to confirm plan details and availability.</p><div class="product-bottom"><div class="price">Ask on Discord<small>Price and stock may vary</small></div><a class="btn btn-primary buy" href="https://discord.gg/sBGPpRnV3" target="_blank" rel="noopener" data-product="CRUNCHYROLL">Enquire ↗</a></div></article>
+        <article class="product" data-category="currency" data-name="FireMC money in-game currency"><div class="product-top"><div class="product-icon">💥</div><span class="tag">Game currency</span></div><h3>FIREMC-MONEY</h3><p class="desc">FireMC in-game currency listings. Confirm server, amount, delivery method, and current rate.</p><div class="product-bottom"><div class="price">Ask on Discord<small>Price and stock may vary</small></div><a class="btn btn-primary buy" href="https://discord.gg/sBGPpRnV3" target="_blank" rel="noopener" data-product="FIREMC-MONEY">Enquire ↗</a></div></article>
+        <article class="product" data-category="accounts" data-name="Free Fire account"><div class="product-top"><div class="product-icon">🔥</div><span class="tag">Gaming</span></div><h3>FREEFIRE-ACCOUNT</h3><p class="desc">Free Fire account listings. Review account details and transfer terms carefully before purchase.</p><div class="product-bottom"><div class="price">Ask on Discord<small>Price and stock may vary</small></div><a class="btn btn-primary buy" href="https://discord.gg/sBGPpRnV3" target="_blank" rel="noopener" data-product="FREEFIRE-ACCOUNT">Enquire ↗</a></div></article>
+        <article class="product" data-category="community" data-name="M3mbers membership"><div class="product-top"><div class="product-icon">👥</div><span class="tag">Memberships</span></div><h3>M3MBERS</h3><p class="desc">Membership-related listings. Contact support to understand exactly what is included.</p><div class="product-bottom"><div class="price">Ask on Discord<small>Price and stock may vary</small></div><a class="btn btn-primary buy" href="https://discord.gg/sBGPpRnV3" target="_blank" rel="noopener" data-product="M3MBERS">Enquire ↗</a></div></article>
+        <article class="product" data-category="currency" data-name="DonutSMP money in-game currency"><div class="product-top"><div class="product-icon">🍩</div><span class="tag">Game currency</span></div><h3>DONUTSMP-MONEY</h3><p class="desc">DonutSMP in-game currency listings. Ask about current rates, delivery, and server rules.</p><div class="product-bottom"><div class="price">Ask on Discord<small>Price and stock may vary</small></div><a class="btn btn-primary buy" href="https://discord.gg/sBGPpRnV3" target="_blank" rel="noopener" data-product="DONUTSMP-MONEY">Enquire ↗</a></div></article>
+      </div><div class="empty" id="emptyState">No products match your search. Try another keyword.</div>
+    </div></section>
+
+    <div class="banner"><div class="wrap"><div class="banner-inner"><div><h2>Need something specific?</h2><p>Join our Discord server to browse listings, open a ticket, and confirm product details.</p></div><a class="btn btn-primary" href="#contact">Contact Dragon Market ↗</a></div></div></div>
+
+    <section id="how"><div class="wrap"><div class="section-head"><div><div class="kicker">Simple process</div><h2>How it works</h2><p>Keep every order clear and straightforward.</p></div></div>
+      <div class="steps"><div class="step"><div class="step-num">01</div><h3>Choose a product</h3><p>Browse the catalogue and check the product description, price, and availability.</p></div><div class="step"><div class="step-num">02</div><h3>Contact support</h3><p>Ask questions and confirm delivery, account or subscription terms, and payment options.</p></div><div class="step"><div class="step-num">03</div><h3>Confirm your order</h3><p>Proceed only after the details are clear. Keep your order confirmation for support.</p></div></div>
+    </div></section>
+
+    <section id="faq"><div class="wrap"><div class="section-head"><div><div class="kicker">Need to know</div><h2>Frequently asked questions</h2></div></div>
+      <div class="faq"><details><summary>How do I buy a product?</summary><p>Click “Enquire” on a product and use the support contact below. Confirm the exact product, total price, delivery method, and applicable terms before paying.</p></details><details><summary>Are the displayed prices final?</summary><p>Not yet. This is a review draft. Some prices are placeholders and should be updated after you confirm your product list and currency.</p></details><details><summary>How do I get support?</summary><p>Join the Dragon Market Discord using the invite link below. If the invite expires, contact IGN Askari1214 or _cinoxicxd.</p></details><details><summary>Can I request another product?</summary><p>Yes. Choose “More Products” or message support to ask about availability.</p></details></div>
+    </div></section>
+
+    <section id="contact"><div class="wrap"><div class="section-head"><div><div class="kicker">Let’s talk</div><h2>Get in touch.</h2><p>Questions about a product? Contact the Dragon Market team.</p></div></div>
+      <div class="banner-inner"><div><h2>Dragon Market Discord</h2><p id="selectedProduct">Join our Discord to ask about listings and place an order. If the invite expires, contact IGN: <strong>Askari1214</strong> or <strong>_cinoxicxd</strong>.</p></div><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" id="discordLink" href="https://discord.gg/sBGPpRnV3" target="_blank" rel="noopener">Join Discord ↗</a><span class="btn btn-ghost">Backup IGN: Askari1214 · _cinoxicxd</span></div></div>
+      <p class="notice">Contact: Discord invite https://discord.gg/sBGPpRnV3 · Backup IGNs: Askari1214 and _cinoxicxd. Keep product details, delivery terms, and any applicable platform rules clear before ordering.</p>
+    </div></section>
+  </main>
+
+  <footer><div class="wrap"><div class="footer-top"><a class="brand" href="#home"><span class="dragon-mark"><img src="./DragonMarket-Logo.png" alt="Dragon Market dragon logo"></span><span>DRAGON MARKET</span></a><div class="footer-links"><a href="#shop">Shop</a><a href="#faq">FAQ</a><a href="#contact">Support</a></div></div><div class="footer-copy">© <span id="year"></span> Dragon Market. All rights reserved.</div><div class="notice">Product names and trademarks belong to their respective owners. Dragon Market is an independent storefront and is not affiliated with the brands listed unless explicitly stated.</div></div></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script>
+    const searchInput=document.getElementById('searchInput');
+    const cards=[...document.querySelectorAll('.product')];
+    const filters=[...document.querySelectorAll('.filter')];
+    let activeFilter='all';
+    function filterProducts(){
+      const query=searchInput.value.trim().toLowerCase();let visible=0;
+      cards.forEach(card=>{
+        const matchesFilter=activeFilter==='all'||card.dataset.category===activeFilter;
+        const matchesSearch=(card.dataset.name+' '+card.innerText).toLowerCase().includes(query);
+        card.style.display=matchesFilter&&matchesSearch?'':'none';
+        if(matchesFilter&&matchesSearch)visible++;
+      });
+      document.getElementById('emptyState').style.display=visible?'none':'block';
+    }
+    filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(x=>x.classList.remove('active'));btn.classList.add('active');activeFilter=btn.dataset.filter;filterProducts()}));
+    searchInput.addEventListener('input',filterProducts);
+    const toast=document.getElementById('toast');
+    document.querySelectorAll('[data-product]').forEach(btn=>btn.addEventListener('click',()=>{
+      const name=btn.dataset.product;
+      document.getElementById('selectedProduct').textContent='I’m interested in: '+name+'. Please confirm current price, availability, and terms.';
+      toast.textContent=name+' selected — contact support to confirm details.';
+      toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600);
+    }));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('menuBtn').addEventListener('click',()=>{
+      const nav=document.querySelector('.navlinks');
+      const open=nav.style.display==='flex';
+      nav.style.display=open?'none':'flex';
+      if(!open){nav.style.flexDirection='column';nav.style.position='absolute';nav.style.top='68px';nav.style.left='14px';nav.style.right='14px';nav.style.padding='18px';nav.style.background='#101624';nav.style.border='1px solid var(--line)';nav.style.borderRadius='16px';}
+    });
+  </script>
+</body>
+</html>
